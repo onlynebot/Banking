@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlueSilo Mortgage Bank Plc | BMBank</title>
+  <link rel="icon" href="{% static 'images/favicon.ico' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-logo" href="#">
+        <img class="logo" src="{% static 'images/blogo.png' %}" alt="logo" height="40" width="60"
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse ml-5rem" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'login' %}">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'register' %}">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    {% block content %}
+    {% endblock content %}
+
+  </main>
+  
+  <footer>
+    <div class="container-fluid bg-primary">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Quick Links</h3>
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Login</li>
+            <li>Register</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h3>BMB AIM</h3>
+          <p>BlueSilo Mortgage Bank builds your financial future with secure investments, offering stability and growth through innovative mortgage solutions. Trust us to turn your dreams into sustainable wealth.</p>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+</body>
+
+<script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+
+</html>
